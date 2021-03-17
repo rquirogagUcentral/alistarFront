@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "Alistar"
+  "defaultProject": "Alistar",
+  "cli": {
+    "analytics": "6f66e4c9-b50a-418f-9b5d-60517b768715"
+  }
 }
