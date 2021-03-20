@@ -9,6 +9,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { FinderComponent } from './components/finder/finder.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ComponenteInicialComponent } from './components/componente-inicial/componente-inicial.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './components/footer/footer.component';
     RegisterComponent,
     BannerComponent,
     FinderComponent,
-    FooterComponent
+    FooterComponent,
+    ComponenteInicialComponent
   ],
   imports: [
     BrowserModule,
