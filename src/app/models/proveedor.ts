@@ -1,13 +1,6 @@
 export class Proveedor {
-
-  constructor (
-    public id : number,
-    public name: string,
-    public img: string,
-    public description: string
-  )
-  {
-
-  }
-
+  id : number = 0;
+  name: string = '';
+  img: string = '';
+  description: string = '';
 }

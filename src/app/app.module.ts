@@ -10,6 +10,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { FinderComponent } from './components/finder/finder.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ComponenteInicialComponent } from './components/componente-inicial/componente-inicial.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +21,13 @@ import { ComponenteInicialComponent } from './components/componente-inicial/comp
     BannerComponent,
     FinderComponent,
     FooterComponent,
-    ComponenteInicialComponent
+    ComponenteInicialComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

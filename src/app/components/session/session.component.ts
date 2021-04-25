@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from '../../models/usuario';
 
 @Component({
   selector: 'app-session',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SessionComponent implements OnInit {
 
+  public usuario : Usuario = new Usuario();
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  login():void
+  {
+
   }
 
 }
