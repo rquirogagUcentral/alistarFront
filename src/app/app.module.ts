@@ -12,6 +12,7 @@ import { FinderComponent } from './components/finder/finder.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ComponenteInicialComponent } from './components/componente-inicial/componente-inicial.component';
 import { FormsModule } from '@angular/forms';
+import { TypeUserComponent } from './components/type-user/type-user.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     FinderComponent,
     FooterComponent,
     ComponenteInicialComponent,
+    TypeUserComponent,
 
   ],
   imports: [
