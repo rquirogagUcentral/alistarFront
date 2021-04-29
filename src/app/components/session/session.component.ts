@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConsultaUsuario } from 'src/app/models/consultaUsuario';
+<<<<<<< HEAD
 import { ConsultaUsuarioResponse } from 'src/app/models/consultaUsuarioResponse';
 import { SessionService } from 'src/app/services/session.service';
 import { Usuario } from '../../models/usuario';
+=======
+import { SessionService } from 'src/app/services/session.service';
+>>>>>>> beb505baa708a065f7668e3bc6569f1770f99b0a
 
 @Component({
   selector: 'app-session',
@@ -14,6 +18,7 @@ import { Usuario } from '../../models/usuario';
 export class SessionComponent implements OnInit {
 
   public usuario: ConsultaUsuario 
+<<<<<<< HEAD
   public resUsuario: ConsultaUsuarioResponse
   public identity: any
   public consulta: any
@@ -25,8 +30,21 @@ export class SessionComponent implements OnInit {
     this.usuario = new ConsultaUsuario()
     this.resUsuario = new ConsultaUsuarioResponse('')
    }
+=======
+  public identity: any
+  public consulta: any
+
+  constructor(
+    private _sesionService: SessionService,
+    private _router: Router,
+  ) { 
+    this.usuario = new ConsultaUsuario()
+  }
+>>>>>>> beb505baa708a065f7668e3bc6569f1770f99b0a
 
   ngOnInit(): void {
+    /**datos del usuario identificado */
+    this.identity = this._sesionService.getIdentity();
   }
 
   login():void
