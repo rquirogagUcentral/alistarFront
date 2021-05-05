@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ConsultaUsuario } from 'src/app/models/consultaUsuario';
+import { ConsultaUsuarioResponse } from 'src/app/models/consultaUsuarioResponse';
 import { SessionService } from 'src/app/services/session.service';
+import { Usuario } from '../../models/usuario';
+
 
 @Component({
   selector: 'app-session',
@@ -12,15 +15,19 @@ import { SessionService } from 'src/app/services/session.service';
 export class SessionComponent implements OnInit {
 
   public usuario: ConsultaUsuario
+
+  public resUsuario: ConsultaUsuarioResponse
   public identity: any
   public consulta: any
 
   constructor(
     private _sesionService: SessionService,
-    private _router: Router,
+    private _router: Router
   ) {
     this.usuario = new ConsultaUsuario()
-  }
+    this.resUsuario = new ConsultaUsuarioResponse('')
+   }
+
 
   ngOnInit(): void {
     /**datos del usuario identificado */
