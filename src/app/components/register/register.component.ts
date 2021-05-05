@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { tipoDocumento } from '../../mocks/mock-tipoDoc';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
+  tdocs = tipoDocumento;
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }
