@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TypeUserComponent } from './type-user.component';
+import { EventDetailComponent } from './event-detail.component';
 
-describe('TypeUserComponent', () => {
-  let component: TypeUserComponent;
-  let fixture: ComponentFixture<TypeUserComponent>;
+describe('EventDetailComponent', () => {
+  let component: EventDetailComponent;
+  let fixture: ComponentFixture<EventDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TypeUserComponent ]
+      declarations: [ EventDetailComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TypeUserComponent);
+    fixture = TestBed.createComponent(EventDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

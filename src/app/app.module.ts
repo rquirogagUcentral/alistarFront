@@ -13,6 +13,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ComponenteInicialComponent } from './components/componente-inicial/componente-inicial.component';
 import { FormsModule } from '@angular/forms';
 import { TypeUserComponent } from './components/type-user/type-user.component';
+import { UserXEventComponent } from './components/user-xevent/user-xevent.component';
+import { UserXservComponent } from './components/user-xserv/user-xserv.component';
+import { EventDetailComponent } from './components/event-detail/event-detail.component';
+import { ServDetailComponent } from './components/serv-detail/serv-detail.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +29,10 @@ import { TypeUserComponent } from './components/type-user/type-user.component';
     FooterComponent,
     ComponenteInicialComponent,
     TypeUserComponent,
+    UserXEventComponent,
+    UserXservComponent,
+    EventDetailComponent,
+    ServDetailComponent,
 
   ],
   imports: [

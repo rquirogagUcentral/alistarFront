@@ -9,10 +9,14 @@ import { tipoDocumento } from '../../mocks/mock-tipoDoc';
 export class RegisterComponent implements OnInit {
 
   tdocs = tipoDocumento;
-  constructor() { }
+  constructor() {
+    console.log(this.tdocs);
+
+   }
 
   ngOnInit(): void {
-
+    this.tdocs = tipoDocumento;
+    console.log(this.tdocs);
   }
 
 }

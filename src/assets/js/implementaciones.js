@@ -12,6 +12,7 @@ $(document).ready(function(){
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('select');
   var instances = M.FormSelect.init(elems, options);
+  throw new Error('Valid token not returned')
 });
 
 $(document).ready(function(){

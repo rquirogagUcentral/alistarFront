@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Mis Eventos</h1>
+</div>
+<div class="container">
+  <h5 class="card-title">Listado de mis eventos</h5>
+
+  <div class="my-2 text-left">
+    <button class="btn btn-rounder btn-primary" type="button" [routerLink] = "['/eventxUser/form']">Crear Cliente</button>
+  </div>
+
+  <div class="collection">
+    <a href="#!" *ngFor="let evento of eventos" class="collection-item">{{evento.nombreEvento}}  --   {{evento.fechaEvento}}</a>
+  </div>
+
+</div>
+
+
