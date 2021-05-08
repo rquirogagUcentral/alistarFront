@@ -1,54 +1,30 @@
 <div class="container">
-  <div class="section">
-    <div class="row">
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Documento de Identidad</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" autofocus required
-                  #user="ngModel" name="usuario" [(ngModel)]="usuario.usuario" placeholder="Documento de identidad">
-          <div id="emailHelp" class="form-text">Recuerda que es el documento de identidad</div>
+  <div class="row">
+    <div class="s12 m4 l8 ">
+      <h2 class="header">Acceder</h2>
+      <div class="card horizontal">
+        <div class="card-content">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Documento de Identidad</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" autofocus
+                required="true" #user="ngModel" maxlength="10" name="usuario" [(ngModel)]="usuario.usuario"
+                placeholder="Documento de identidad">
+              <div id="emailHelp" class="form-text">Recuerda que es el documento de identidad</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" maxlength="30" id="exampleInputPassword1" autofocus required="true"
+                #password="ngModel" name="password" [(ngModel)]="usuario.password" placeholder="Contraseña">
+            </div>
+            <div class="card-action">
+              <button type="submit" class="btn btn-primary" (click)="login()">Ingresar</button>
+            </div>
+          </form>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" autofocus required
-                #password="ngModel" name="password"[(ngModel)]="usuario.password" placeholder="Contraseña">
-        </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Valida Toda tu información!</label>
-        </div>
-        <button type="submit" class="btn btn-primary" (click)="login()">Ingresar</button>
-      </form>
-
+      </div>
     </div>
   </div>
 
 
 </div>
-<!--<div class="container">
-  <div class="backbox">
-    <div class="loginMsg">
-      <div class="textcontent">
-        <p class="title">Aún no tienes una Cuenta?</p>
-        <p>Haz parte de Alistar.</p>
-        <button type="submit" class="btn btn-secundary">Registro</button>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="frontbox">
-    <div class="login">
-      <h2>INGRESO</h2>
-      <div class="inputbox">
-        <input type="text" name="numId" class="form-control" id="exampleInputEmail1" placeholder=" Documento de Identidad" [(ngModel)]="usuario.numeroIdentificacion">
-        <input type="password" name="password" placeholder="  Contraseña" [(ngModel)]="usuario.password">
-      </div>
-      <p>Oldido la Contraseña?</p>
-      <button class="btn btn-primary" (click)='login()'>Ingresar</button>
-    </div>
-
-
-  </div>
-
-</div>-->
