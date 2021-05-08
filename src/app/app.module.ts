@@ -17,6 +17,7 @@ import { UserXEventComponent } from './components/user-xevent/user-xevent.compon
 import { UserXservComponent } from './components/user-xserv/user-xserv.component';
 import { EventDetailComponent } from './components/event-detail/event-detail.component';
 import { ServDetailComponent } from './components/serv-detail/serv-detail.component';
+import { ListadoServiciosComponent } from './components/listado-servicios/listado-servicios.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ServDetailComponent } from './components/serv-detail/serv-detail.compon
     UserXservComponent,
     EventDetailComponent,
     ServDetailComponent,
+    ListadoServiciosComponent,
 
   ],
   imports: [
