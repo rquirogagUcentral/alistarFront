@@ -1,6 +1,6 @@
 import { TipoDocumento } from '../models/tipoDocumento';
 
-export const tipoDocumento : TipoDocumento [] =
+export const TIPODOCUMENTO : TipoDocumento [] =
 [
   {
     tipoDocumento : 1,
@@ -17,4 +17,4 @@ export const tipoDocumento : TipoDocumento [] =
     descripcionCorta : "NIT",
     descripcionLarga : "NIT"
   },
-]
+];

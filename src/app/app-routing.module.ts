@@ -13,7 +13,7 @@ import { UserXservComponent } from './components/user-xserv/user-xserv.component
 const routes: Routes = [
   {path: 'login', component: SessionComponent},
   {path: 'register', component: RegisterComponent},
-  {path: '',component:ComponenteInicialComponent},
+  {path: '',component:ComponenteInicialComponent,},
   {path: 'typeUser', component: TypeUserComponent},
   {path: 'eventxUser', component: UserXEventComponent},
   {path: 'servxUser', component: UserXservComponent},

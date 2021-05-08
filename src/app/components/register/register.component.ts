@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { tipoDocumento } from '../../mocks/mock-tipoDoc';
+import { TIPODOCUMENTO } from '../../mocks/mock-tipoDoc';
 
 @Component({
   selector: 'app-register',
@@ -8,15 +8,20 @@ import { tipoDocumento } from '../../mocks/mock-tipoDoc';
 })
 export class RegisterComponent implements OnInit {
 
-  tdocs = tipoDocumento;
-  constructor() {
-    console.log(this.tdocs);
+  docs=TIPODOCUMENTO;
 
+  constructor() {
+    console.log(this.docs);
+    `$('.datepicker').datepicker()`;
+    `$('.modal').modal()`;
+    `$('select').formSelect()`;
    }
 
   ngOnInit(): void {
-    this.tdocs = tipoDocumento;
-    console.log(this.tdocs);
+
+
+
+    console.log(this.docs);
   }
 
 }
