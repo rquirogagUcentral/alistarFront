@@ -12,6 +12,7 @@ export class RegisterComponent implements OnInit {
 
   constructor() {
     console.log(this.docs);
+
     `$('.datepicker').datepicker()`;
     `$('.modal').modal()`;
     `$('select').formSelect()`;

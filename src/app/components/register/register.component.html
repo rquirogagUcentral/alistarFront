@@ -10,12 +10,11 @@
                 <input id="name" type="text" class="validate">
                 <label for="name">Nombres Completos</label>
               </div>
-              <div class="input-field col s12 m4">
-                <select>
-                  <option value="" disabled selected >Seleccione un tipo</option>
+              <div class="input-field col s12 m4" >
+                <select class="browser-default">
+                  <option value="" disabled selected>Seleccione ..... </option>
                   <option *ngFor="let doc of docs">{{doc.descripcionLarga}}</option>
                 </select>
-                <label>Tipo de Documento</label>
               </div>
               <div class="input-field col s12 m4">
                 <input id="email" type="text" class="validate">
@@ -55,7 +54,7 @@
                 <p>
                   <label>
                     <input type="checkbox" />
-                    <span> Acepta  <a class="waves-effect waves-light  modal-trigger" href="#modal1" > Terminos y condiciciones</a></span>
+                    <span> Acepta  <a id="modal" onclick="modal()" class="waves-effect waves-light  modal-trigger" href="#modal1" > Terminos y condiciciones</a></span>
                   </label>
                 </p>
               </div>
