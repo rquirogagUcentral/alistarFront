@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="section">
+    <div class="row">
+      <div class="s12 m4 l8 ">
+        <h2 class="header">Crea tu servicio</h2>
+        <div class="card horizontal">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="name" type="text" class="form-control"
+                name="nombre" >
+                <label for="name">Nombre de su servicio</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <select name="categoria" >
+                  <option value="" disabled selected >Seleccione una Categoría</option>
+                  <option *ngFor="let cat of cats">{{cat.nombreCategoria}}</option>
+                </select>
+                <label>Categoría</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="direccionServicio" type="text" class="form-control"
+                name="numeriIdentificacion" >
+                <label for="direccionServicio">Direccion Servicio</label>
+              </div>
+              <div class="input-field col s12 m12">
+                <input id="descripcion" type="text" class="form-control"
+                name="descripcion" >
+                <label for="descripcion">Describe tu Servicio</label>
+              </div>
+            </div>
+
+            <div class="col s12 m6">
+              <p>
+                <label>
+                  <input type="checkbox" />
+                  <span> Acepta  <a class="waves-effect waves-light  modal-trigger" href="#modal1" > Terminos y condiciciones</a></span>
+                </label>
+              </p>
+            </div>
+
+            <div class="card-action">
+
+              <button type="submit" class="btn btn-primary pulse" >Crea tu Servicio</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Terminos y condiciciones del sitio</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam incidunt quibusdam provident consequatur natus, quas, illo doloremque, rem quidem reiciendis molestias suscipit aliquam soluta impedit sed animi! Necessitatibus, suscipit animi?</p>
+    </div>
+    <div class="modal-footer">
+      <a class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+  </div>

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Usuario } from '../models/usuario';
 //import { LocalStorageService } from './localStorage.service'
 
 @Injectable({
@@ -24,6 +25,11 @@ export class UsuarioService {
     })
   }
 
-
+  register(usuario: Usuario) {
+    let json = JSON.stringify(usuario)
+    let params = json
+    const path = `${this.url}/Usuarios/save-usuario`
+    return this._http.post<Usuario>(path, params, this.httpOptions)
+  }
 
 }

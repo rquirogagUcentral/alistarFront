@@ -3,12 +3,12 @@ import { TipoDocumento } from '../models/tipoDocumento';
 export const TIPODOCUMENTO : TipoDocumento [] =
 [
   {
-    tipoDocumento : 1,
+    tipoDocumento : 2,
     descripcionCorta : "C.C",
     descripcionLarga : "Cédula de Ciudadanía"
   },
   {
-    tipoDocumento : 2,
+    tipoDocumento : 4,
     descripcionCorta : "C.E",
     descripcionLarga : "Cédula de Extranjería"
   },
