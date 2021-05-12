@@ -18,6 +18,11 @@ import { UserXservComponent } from './components/user-xserv/user-xserv.component
 import { EventDetailComponent } from './components/event-detail/event-detail.component';
 import { ServDetailComponent } from './components/serv-detail/serv-detail.component';
 import { ListadoServiciosComponent } from './components/listado-servicios/listado-servicios.component';
+import { AddServiceComponent } from './components/add-service/add-service.component';
+import { CreateServiceComponent } from './components/create-service/create-service.component';
+import { DetailEventComponent } from './components/detail-event/detail-event.component';
+import { CreateEventComponent } from './components/create-event/create-event.component';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +40,11 @@ import { ListadoServiciosComponent } from './components/listado-servicios/listad
     EventDetailComponent,
     ServDetailComponent,
     ListadoServiciosComponent,
+    AddServiceComponent,
+    CreateServiceComponent,
+    DetailEventComponent,
+    CreateEventComponent,
+    ForgetPasswordComponent,
 
   ],
   imports: [

@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>Crea tu evento !</h1>
+
+
+  <div class="row">
+    <div class="input-field col s12">
+      <input id="name" type="text" class="validate">
+      <label for="name">Nombre del Evento</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <label for="email_inline">Fecha de Cumpleaños</label>
+      <input type="text" class="datepicker">
+    </div>
+    <div class="input-field col s6">
+      <input id="name" type="text" class="validate">
+      <label for="name">lllalaal</label>
+    </div>
+  </div>
+
+
+  <div class="my-2 text-left">
+    <button class="btn btn-rounder btn-primary" type="button" [routerLink] = "['/servicios']">Adiciona + Servicios</button>
+  </div>
+  <h3>Mis servicios Adquiridos</h3>
+  <div class="row">
+    <div class="collection">
+      <a href="/servxUser/serviceDetail" *ngFor="let service of services" class="collection-item">{{service.nombreServicio}}</a>
+    </div>
+
+  </div>
+</div>

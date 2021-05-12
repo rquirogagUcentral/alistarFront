@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {proveedor} from '../../mocks/mock-proveedores';
 
 @Component({
   selector: 'app-listado-servicios',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoServiciosComponent implements OnInit {
 
+  cards = proveedor;
   constructor() { }
 
   ngOnInit(): void {

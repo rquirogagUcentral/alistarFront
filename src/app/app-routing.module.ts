@@ -1,6 +1,10 @@
 import { Component, NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AddServiceComponent } from './components/add-service/add-service.component';
 import { ComponenteInicialComponent } from './components/componente-inicial/componente-inicial.component';
+import { CreateEventComponent } from './components/create-event/create-event.component';
+import { CreateServiceComponent } from './components/create-service/create-service.component';
+import { DetailEventComponent } from './components/detail-event/detail-event.component';
 import { ListadoServiciosComponent } from './components/listado-servicios/listado-servicios.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ServDetailComponent } from './components/serv-detail/serv-detail.component';
@@ -18,7 +22,11 @@ const routes: Routes = [
   {path: 'eventxUser', component: UserXEventComponent},
   {path: 'servxUser', component: UserXservComponent},
   {path: 'servxUser/serviceDetail', component: ServDetailComponent},
-  {path: 'servicios', component: ListadoServiciosComponent}
+  {path: 'servicios', component: ListadoServiciosComponent},
+  {path: 'eventxUser/createEvent', component: CreateEventComponent},
+  {path: 'eventxUser/detailEvent', component: DetailEventComponent},
+  {path: 'servxUser/addService', component: AddServiceComponent},
+  {path: 'servxUser/createService', component: CreateServiceComponent}
 ];
 
 @NgModule({
