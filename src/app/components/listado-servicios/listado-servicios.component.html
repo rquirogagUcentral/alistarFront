@@ -1,32 +1,15 @@
 <div class="container">
-  <div class="nav-wrapper">
-    <form>
-      <div class="input-field">
-        <input id="search" type="search" required>
-        <label class="label-icon" for="search"><i class="material-icons">search:    </i></label>
-        <i class="material-icons">close</i>
-      </div>
-    </form>
-  </div>
-</div>
-<div>
-  <div class="container">
-    <div class="row">
-      <div class="col s3" *ngFor="let card of cards">
-        <div class="card medium" >
-          <div class="card-image">
-            <img [src]="card.img">
-            <span class="card-title">{{card.name}}</span>
-          </div>
-          <div class="card-content">
-            <p>{{card.description}}</p>
-          </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
-          </div>
+  <div class="row g-3 ">
+    <div class=" col-md-4" *ngFor="let card of cards">
+      <div class="card" style="width: 18rem;">
+        <img [src]="card.img" class="card-img-top" alt="..."><img>
+
+        <div class="card-body">
+          <h5 class="card-title">{{card.name}}</h5>
+          <p class="card-text">{{card.description}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
-
     </div>
   </div>
 </div>
