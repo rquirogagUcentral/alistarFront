@@ -5,6 +5,7 @@ import { ComponenteInicialComponent } from './components/componente-inicial/comp
 import { CreateEventComponent } from './components/create-event/create-event.component';
 import { CreateServiceComponent } from './components/create-service/create-service.component';
 import { DetailEventComponent } from './components/detail-event/detail-event.component';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { ListadoServiciosComponent } from './components/listado-servicios/listado-servicios.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ServDetailComponent } from './components/serv-detail/serv-detail.component';
@@ -26,7 +27,8 @@ const routes: Routes = [
   {path: 'eventxUser/createEvent', component: CreateEventComponent},
   {path: 'eventxUser/detailEvent', component: DetailEventComponent},
   {path: 'servxUser/addService', component: AddServiceComponent},
-  {path: 'servxUser/createService', component: CreateServiceComponent}
+  {path: 'servxUser/createService', component: CreateServiceComponent},
+  {path: 'getPassword', component: ForgetPasswordComponent}
 ];
 
 @NgModule({
