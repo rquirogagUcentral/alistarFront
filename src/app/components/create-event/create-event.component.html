@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Crea tu evento !</h1>
 
-
+  <p>Indicanos el nombre del evento y la fecha en la que planeas realizarlo !!! comienza a seleccionar tus servicios, contactar con provedores potenciales sin moverte de tu puesto</p>
   <div class="row">
     <div class="input-field col s12">
       <input id="name" type="text" class="validate">
@@ -10,17 +10,19 @@
   </div>
   <div class="row">
     <div class="input-field col s6">
-      <label for="email_inline">Fecha de Cumpleaños</label>
+      <label for="email_inline">Fecha del Evento</label>
       <input type="text" class="datepicker">
     </div>
     <div class="input-field col s6">
       <input id="name" type="text" class="validate">
-      <label for="name">lllalaal</label>
+      <label for="name">Hora Evento</label>
     </div>
   </div>
-
-
   <div class="my-2 text-left">
+    <button class="btn btn-rounder btn-primary" type="button" (click)="createEvent()">Crear Evento.</button>
+  </div>
+
+  <!--<div class="my-2 text-left">
     <button class="btn btn-rounder btn-primary" type="button" [routerLink] = "['/servicios']">Adiciona + Servicios</button>
   </div>
   <h3>Mis servicios Adquiridos</h3>
@@ -30,4 +32,4 @@
     </div>
 
   </div>
-</div>
+</div>-->

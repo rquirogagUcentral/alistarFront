@@ -4,6 +4,7 @@ import { TipoDocumento } from '../../models/tipoDocumento';
 import { Usuario } from '../../models/usuario';
 import { DropDownService } from 'src/app/services/drop-down.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -18,7 +19,8 @@ export class RegisterComponent implements OnInit {
   public identity : any;
   constructor(
     private dropdownService: DropDownService,
-    private _usuarioService : UsuarioService
+    private _usuarioService : UsuarioService,
+    private _router: Router
   ) {
 
     this.usuario = new Usuario();
@@ -42,19 +44,7 @@ export class RegisterComponent implements OnInit {
         let identity = response
         console.log(response)
         this.identity = identity
-        console.log(this.identity);
-        if(this.identity.mensaje=='OK')
-        {
-          alert("Usurio guardado");
-          console.log(this.identity.mensaje);
-          this.usuario.direccion=''
-          this.usuario.email=''
-          this.usuario.fechaNacimiento=''
-          this.usuario.nombre=''
-          this.usuario.password=''
-
-        }
-
+        this._router.navigate(['login'])
       }
     );
   }

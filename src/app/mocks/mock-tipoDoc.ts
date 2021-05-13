@@ -1,6 +1,6 @@
 import { TipoDocumento } from '../models/tipoDocumento';
 
-export const TIPODOCUMENTO : TipoDocumento [] =
+export const  TIPODOCUMENTO : TipoDocumento [] =
 [
   {
     tipoDocumento : 2,

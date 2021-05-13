@@ -14,13 +14,13 @@
           </div>
           <div class="input-field col-md-4">
             <label for="tipoDoc">Tipo documento</label>
-            <select class="form-select" aria-label="Default select example" name="tipoDoc" [(ngModel)]="usuario.tipoDocumento">
+            <select class="form-select" name="tipoDoc" aria-label="Default select example" [(ngModel)]="usuario.tipoDocumento">
               <option value="" disabled selected>Seleccione un tipo</option>
-              <option [ngValue]="doc" *ngFor="let doc of docs">{{doc.descripcionLarga}}</option>
+              <option [ngValue]="doc" *ngFor="let doc of tDocs">{{doc.descripcionLarga}}</option>
             </select>
           </div>
           <div class="input-field  col-md-4">
-            <label for="numeroId">Numero de Identificación</label>
+            <label for="identi">Numero de Identificación</label>
             <input id="numeroId" type="text" class="form-control" name="identi"
               [(ngModel)]="usuario.numeroIdentificacion">
           </div>

@@ -45,7 +45,12 @@ export class SessionComponent implements OnInit {
           alert('El usuario no existe')
         } else {
           localStorage.setItem('identity', JSON.stringify(identity))
-          this._router.navigate(['typeUser'])
+          localStorage.setItem('nombreUsuario', this.identity.nombre)
+          this._router.navigate(['typeUser']).then(data=>{
+            window.location.reload()
+          })
+
+
         }
       },
       error => {

@@ -1,28 +1,29 @@
 <div class="container">
-  <div class="card">
-    <div class="card-header">
-      Acceder
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Datos Usuario</h5>
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Documento de Identidad</label>
-          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" autofocus
-            required="true" #user="ngModel" maxlength="10" name="usuario" [(ngModel)]="usuario.usuario"
-            placeholder="Documento de identidad">
-          <div id="emailHelp" class="form-text">Recuerda que es el documento de identidad</div>
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-          <input type="password" class="form-control" maxlength="30" id="exampleInputPassword1" autofocus
-            required="true" #password="ngModel" name="password" [(ngModel)]="usuario.password" placeholder="Contraseña">
+
+  <div class="row">
+    <div class="s12 m4 l8 ">
+      <h2 class="header">Acceder</h2>
+      <div class="card horizontal">
+        <div class="card-content">
+          <form>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" #user="ngModel" maxlength="10" name="usuario" [(ngModel)]="usuario.usuario" placeholder="Documento de Identidad">
+                <label for="floatingInput">Documento de Identidad</label>
+              <div id="emailHelp" class="form-text">Recuerda que es el documento de identidad</div>
+            </div>
+            <div class="form-floating">
+              <input type="password" class="form-control" maxlength="30" id="floatingPassword" name="password" [(ngModel)]="usuario.password" placeholder="Contraseña">
+              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            </div>
+            <br>
+            <div class="card-action">
+              <button type="submit" class="btn btn-primary" (click)="login()">Ingresar</button>
+              <button type="submit" class="waves-effect waves-teal btn-flat" [routerLink] = "['/getPassword']">Olvidasta la Contraseña?</button>
+            </div>
+          </form>
+
         </div>
 
-        <button type="submit" class="btn btn-primary" (click)="login()">Ingresar</button>
-        <button type="submit" class="waves-effect waves-teal btn-flat" hidden (click)="login()">Olvidasta la
-          Contraseña?</button>
-      </form>
     </div>
   </div>
 </div>
