@@ -20,9 +20,7 @@ export class RegisterComponent implements OnInit {
     private dropdownService: DropDownService,
     private _usuarioService : UsuarioService
   ) {
-    `$('.datepicker').datepicker()`;
-    `$('.modal').modal()`;
-    `$('select').formSelect()`;
+
     this.usuario = new Usuario();
     this.tDocs = new Array<TipoDocumento>();
    }
@@ -42,7 +40,21 @@ export class RegisterComponent implements OnInit {
     this._usuarioService.register(this.usuario).subscribe(
       response => {
         let identity = response
+        console.log(response)
         this.identity = identity
+        console.log(this.identity);
+        if(this.identity.mensaje=='OK')
+        {
+          alert("Usurio guardado");
+          console.log(this.identity.mensaje);
+          this.usuario.direccion=''
+          this.usuario.email=''
+          this.usuario.fechaNacimiento=''
+          this.usuario.nombre=''
+          this.usuario.password=''
+
+        }
+
       }
     );
   }
