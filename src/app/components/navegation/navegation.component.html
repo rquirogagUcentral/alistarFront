@@ -22,8 +22,8 @@
 
       </ul>
       <form class="d-flex">
-        <button class="btn btn-outline-secundary"  routerLink="/register"  type="submit">Registrase</button>
-        <button class="btn btn-outline-primary" routerLink="/login"  type="submit">Ingresar</button>
+        <button class="btn btn-outline-secundary"  routerLink="/register" *ngIf="user" type="submit">Registrase</button>
+        <button class="btn btn-outline-primary" routerLink="/login" *ngIf="user" type="submit">Ingresar</button>
       </form>
     </div>
   </div>

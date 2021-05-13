@@ -4,6 +4,7 @@ import { TipoDocumento } from '../../models/tipoDocumento';
 import { Usuario } from '../../models/usuario';
 import { DropDownService } from 'src/app/services/drop-down.service';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -18,7 +19,8 @@ export class RegisterComponent implements OnInit {
   public identity : any;
   constructor(
     private dropdownService: DropDownService,
-    private _usuarioService : UsuarioService
+    private _usuarioService : UsuarioService,
+    private _router: Router
   ) {
     `$('.datepicker').datepicker()`;
     `$('.modal').modal()`;
@@ -43,6 +45,7 @@ export class RegisterComponent implements OnInit {
       response => {
         let identity = response
         this.identity = identity
+        this._router.navigate(['login'])
       }
     );
   }

@@ -7,17 +7,15 @@
         <div class="card-content">
           <form>
             <div class="form-floating mb-3">
-              <label for="floatingInput" class="form-label">Documento de Identidad</label>
-              <input type="text" class="form-control" id="floatingInput" aria-describedby="emailHelp" autofocus
-                required="true" #user="ngModel" maxlength="10" name="usuario" [(ngModel)]="usuario.usuario"
-                placeholder="Documento de identidad">
+              <input type="text" class="form-control" id="floatingInput" #user="ngModel" maxlength="10" name="usuario" [(ngModel)]="usuario.usuario" placeholder="Documento de Identidad">
+                <label for="floatingInput">Documento de Identidad</label>
               <div id="emailHelp" class="form-text">Recuerda que es el documento de identidad</div>
             </div>
-            <div class="mb-3">
+            <div class="form-floating">
+              <input type="password" class="form-control" maxlength="30" id="floatingPassword" name="password" [(ngModel)]="usuario.password" placeholder="Contraseña">
               <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" maxlength="30" id="exampleInputPassword1" autofocus required="true"
-                #password="ngModel" name="password" [(ngModel)]="usuario.password" placeholder="Contraseña">
             </div>
+            <br>
             <div class="card-action">
               <button type="submit" class="btn btn-primary" (click)="login()">Ingresar</button>
               <button type="submit" class="waves-effect waves-teal btn-flat" [routerLink] = "['/getPassword']">Olvidasta la Contraseña?</button>

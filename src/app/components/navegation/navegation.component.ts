@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavegationComponent implements OnInit {
 
-  constructor() { }
+  public user : boolean;
+  constructor() {
+    this.user = false;
+  }
 
   ngOnInit(): void {
+    console.log(localStorage.getItem('identity'))
+    if(localStorage.getItem('identity') != null || localStorage.getItem('identity') !=  undefined)
+    {
+      this.user=true;
+    }
   }
 
 }
