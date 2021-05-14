@@ -3,17 +3,15 @@ import { Servicio } from '../models/servicio';
 export const service : Servicio [] =
 [
   {
-    categoria : [
+    categoria :
       {
         idCategoria : 1,
         nombreCategoria : 'Salas'
       }
-    ],
-    direccion :
-    {
-      idDireccion : 1,
-      direccion : 'AV 12 3 fake st'
-    },
+    ,
+    direccion :'AV 12 3 fake st',
+    descripcionServicio:'prueba',
+    imagenServicio:'adfasdfas',
     nombreServicio : 'Salas Imperial',
     proveedor :
     {

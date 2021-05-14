@@ -6,7 +6,8 @@
         Alistar
       </a>
     </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -18,12 +19,22 @@
           <a class="nav-link active" aria-current="page" routerLink="/servicios" routerLinkActive="active">Servicios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" routerLink="/servicios" routerLinkActive="active">Contactenos</a>
+          <a class="nav-link active" aria-current="page" routerLink="/servicios"
+            routerLinkActive="active">Contactenos</a>
 
       </ul>
       <form class="d-flex">
-        <button class="btn btn-outline-secundary"  routerLink="/register" *ngIf="user" type="submit">Registrase</button>
-        <button class="btn btn-outline-primary" routerLink="/login" *ngIf="user" type="submit">Ingresar</button>
+        <div *ngIf="user; then thenBlock else elseBlock"></div>
+        <ng-template #thenBlock>
+          <div>
+            <div>{{nombreUsuario}}</div>
+            <button class="btn btn-outline-primary" (click)="cerrarCesion()" routerLink=""  type="submit">Cerrar sesion</button>
+          </div>
+        </ng-template>
+        <ng-template #elseBlock>
+          <button class="btn btn-outline-secundary" routerLink="/register" type="submit">Registrase</button>
+          <button class="btn btn-outline-primary" routerLink="/login" type="submit">Ingresar</button>
+        </ng-template>
       </form>
     </div>
   </div>

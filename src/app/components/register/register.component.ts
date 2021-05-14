@@ -22,9 +22,7 @@ export class RegisterComponent implements OnInit {
     private _usuarioService : UsuarioService,
     private _router: Router
   ) {
-    `$('.datepicker').datepicker()`;
-    `$('.modal').modal()`;
-    `$('select').formSelect()`;
+
     this.usuario = new Usuario();
     this.tDocs = new Array<TipoDocumento>();
    }
@@ -44,6 +42,7 @@ export class RegisterComponent implements OnInit {
     this._usuarioService.register(this.usuario).subscribe(
       response => {
         let identity = response
+        console.log(response)
         this.identity = identity
         this._router.navigate(['login'])
       }

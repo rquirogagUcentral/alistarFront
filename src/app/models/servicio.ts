@@ -7,8 +7,10 @@ import { Usuario } from "./usuario";
 
 export class Servicio {
 
-    categoria: Categoria[] = [];
-    direccion: Direccion[] = [];
+    categoria: Categoria = new Categoria;
+    direccion: string = '';
     nombreServicio: string = '';
     proveedor: Usuario = new Usuario;
+    descripcionServicio:String ='';
+    imagenServicio:String=''
 }

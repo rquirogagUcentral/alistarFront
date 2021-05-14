@@ -13,7 +13,7 @@
             </div>
             <div class="row">
               <div class="input-group mb-3">
-                <select name="categoria" class="custom-select" id="inputGroupSelect02" [(ngModel)]="servicio.categoria[0]">
+                <select name="categoria" class="custom-select" id="inputGroupSelect02" [(ngModel)]="servicio.categoria">
                   <option value="" disabled selected >Seleccione una Categoría</option>
                   <option [ngValue]="cat" *ngFor="let cat of cats">{{cat.nombreCategoria}}</option>
                 </select>
@@ -24,16 +24,20 @@
             </div>
             <div class="row">
               <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="direccionServicio" #service="ngModel" name="dirservicio" [(ngModel)]="servicio.direccion[0].direccion" placeholder="Dirección del Servicio">
-                <label for="direccionServicio">Direccion Servicio</label>
+                <input type="text" class="form-control" id="dirservicio" #service="ngModel" name="dirservicio" [(ngModel)]="servicio.direccion" placeholder="Dirección del Servicio">
+                <label for="dirservicio">Direccion Servicio</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="img" #service="ngModel" name="img" [(ngModel)]="servicio.imagenServicio" placeholder="Imagen de servicio" value="../../../assets/img/recepcion.jpg">
+                <label for="img">imagen de Servicio</label>
               </div>
             </div>
-            <!--<div class="row">
+            <div class="row">
               <div class="form-floating col-sm-12">
-                <input id="descripcion" type="text" class="form-control" name="descripcion" [(ngModel)]="servicio.direccion" placeholder="Describe tu Servicio">
+                <input id="descripcion" type="text" class="form-control" name="descripcion" [(ngModel)]="servicio.descripcionServicio" placeholder="Describe tu Servicio">
                 <label for="descripcion">Describe tu Servicio</label>
               </div>
-            </div>-->
+            </div>
             <div class="col s12 m6">
               <p>
                 <label>

@@ -8,6 +8,7 @@ import { ServicioService } from 'src/app/services/servicio.service';
 import { SessionService } from 'src/app/services/session.service';
 //import { Categoria } from '../../mocks/mock-categorias';
 import { Categoria } from '../../models/categoria';
+import { Direccion } from 'src/app/models/direccion';
 
 @Component({
   selector: 'app-create-service',
@@ -18,10 +19,10 @@ export class CreateServiceComponent implements OnInit {
 
   //public cats = Categoria;
   public cats : Categoria[];
-  public category: Categoria;
   public servicio : Servicio;
   public identity : any;
   public usuProveedor : Usuario;
+
   constructor(
     private dropdownService: DropDownService,
     private _ServicioService: ServicioService,
@@ -32,7 +33,6 @@ export class CreateServiceComponent implements OnInit {
     `$('.modal').modal()`;
     `$('select').formSelect()`;
     this.cats = new Array<Categoria>();
-    this.category = new Categoria();
     this.servicio = new Servicio();
     this.usuProveedor = new Usuario();
   }
@@ -41,10 +41,9 @@ export class CreateServiceComponent implements OnInit {
     //Captura de Categorias para mostrar en el formulario
     this.dropdownService.getCategory().subscribe(category => {
       this.cats = category
-      })
+      });
     console.log(this.cats);
 
-    //Inicializa el Local Storage
     this.usuProveedor = this._dataServices.getId()
     console.log(this.usuProveedor)
   }
@@ -52,6 +51,7 @@ export class CreateServiceComponent implements OnInit {
   createService(): void
   {
     this.servicio.proveedor = JSON.parse(this._dataServices.getId())
+    console.log(this.servicio.direccion);
     console.log(this.servicio.proveedor);
     console.log(this.servicio);
     this._ServicioService.createservice(this.servicio).subscribe(response =>{

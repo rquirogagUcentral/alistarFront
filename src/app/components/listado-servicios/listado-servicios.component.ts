@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {proveedor} from '../../mocks/mock-proveedores';
+import { Servicio } from 'src/app/models/servicio';
+import { ServicioService } from 'src/app/services/servicio.service';
+
 
 @Component({
   selector: 'app-listado-servicios',
@@ -8,10 +10,18 @@ import {proveedor} from '../../mocks/mock-proveedores';
 })
 export class ListadoServiciosComponent implements OnInit {
 
-  cards = proveedor;
-  constructor() { }
+
+   ListedService : Servicio[] =[] ;
+
+  constructor( private _ServicioService: ServicioService) {
+   }
 
   ngOnInit(): void {
+    this.getAllServicios();
   }
-
+  getAllServicios(){
+      this._ServicioService.listedServices().subscribe(data=>{
+      this.ListedService =data;
+      })
+  }
 }
