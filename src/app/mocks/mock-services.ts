@@ -15,6 +15,8 @@ export const service : Servicio [] =
         direccion : 'AV 12 3 fake st'
       }
     ],
+    descripcionServicio:'prueba',
+    imagenServicio:'adfasdfas',
     nombreServicio : 'Salas Imperial',
     proveedor :
     {

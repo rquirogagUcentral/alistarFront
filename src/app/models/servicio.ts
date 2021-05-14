@@ -13,4 +13,6 @@ export class Servicio {
     proveedor: Usuario = new Usuario;
     telefonos: Telefono = new Telefono;
     tipoDocumento: TipoDocumento = new TipoDocumento;
+    descripcionServicio:String ='';
+    imagenServicio:String=''
 }
