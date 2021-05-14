@@ -6,33 +6,34 @@
         <div class="card horizontal">
           <form class="col s12">
             <div class="row">
-              <div class="input-field col s12">
-                <input id="name" type="text" class="form-control"
-                name="nombre" >
-                <label for="name">Nombre de su servicio</label>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingInput" #service="ngModel" name="servicio" [(ngModel)]="servicio.nombreServicio" placeholder="Nombre del Servicio">
+                <label for="floatingInput">Nombre de su servicio</label>
               </div>
             </div>
             <div class="row">
-              <div class="input-field col s6">
-                <select name="categoria" >
+              <div class="input-group mb-3">
+                <select name="categoria" class="custom-select" id="inputGroupSelect02" [(ngModel)]="servicio.categoria[0]">
                   <option value="" disabled selected >Seleccione una Categoría</option>
-                  <option *ngFor="let cat of cats">{{cat.nombreCategoria}}</option>
+                  <option [ngValue]="cat" *ngFor="let cat of cats">{{cat.nombreCategoria}}</option>
                 </select>
-                <label>Categoría</label>
+                <div class="input-group-append">
+                  <label class="input-group-text" for="inputGroupSelect02">Categoria</label>
+                </div>
               </div>
-              <div class="input-field col s6">
-                <input id="direccionServicio" type="text" class="form-control"
-                name="numeriIdentificacion" >
+            </div>
+            <div class="row">
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="direccionServicio" #service="ngModel" name="dirservicio" [(ngModel)]="servicio.direccion[0].direccion" placeholder="Dirección del Servicio">
                 <label for="direccionServicio">Direccion Servicio</label>
               </div>
             </div>
-            <div class="row">
-              <div class="input-field col s12 m12">
-                <input id="descripcion" type="text" class="form-control"
-                name="descripcion" >
+            <!--<div class="row">
+              <div class="form-floating col-sm-12">
+                <input id="descripcion" type="text" class="form-control" name="descripcion" [(ngModel)]="servicio.direccion" placeholder="Describe tu Servicio">
                 <label for="descripcion">Describe tu Servicio</label>
               </div>
-            </div>
+            </div>-->
             <div class="col s12 m6">
               <p>
                 <label>
@@ -44,7 +45,7 @@
 
             <div class="card-action">
 
-              <button type="submit" class="btn btn-primary pulse" >Crea tu Servicio</button>
+              <button type="submit" class="btn btn-primary pulse" (click)="createService()">Crea tu Servicio</button>
             </div>
 
           </form>

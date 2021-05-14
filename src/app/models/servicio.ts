@@ -11,6 +11,4 @@ export class Servicio {
     direccion: Direccion[] = [];
     nombreServicio: string = '';
     proveedor: Usuario = new Usuario;
-    telefonos: Telefono = new Telefono;
-    tipoDocumento: TipoDocumento = new TipoDocumento;
 }

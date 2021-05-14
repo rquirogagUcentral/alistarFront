@@ -9,12 +9,11 @@ export const service : Servicio [] =
         nombreCategoria : 'Salas'
       }
     ],
-    direccion : [
-      {
-        idDireccion : 1,
-        direccion : 'AV 12 3 fake st'
-      }
-    ],
+    direccion :
+    {
+      idDireccion : 1,
+      direccion : 'AV 12 3 fake st'
+    },
     nombreServicio : 'Salas Imperial',
     proveedor :
     {
@@ -35,16 +34,7 @@ export const service : Servicio [] =
         telefono : "3007777777"
       },
       email : "rquirogag@ucentral.edu.co",
-    },
-    telefonos : {
-      idTelefono: 1,
-      telefono: '3007777777'
-    },
-    tipoDocumento :
-    {
-      tipoDocumento: 1,
-      descripcionCorta: 'C.C',
-      descripcionLarga : "Cédula de Ciudadania"
     }
+
   }
 ]
