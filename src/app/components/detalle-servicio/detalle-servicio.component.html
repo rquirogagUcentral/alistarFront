@@ -3,7 +3,7 @@
     <h5 class="card-header">{{servicioDetalle.nombreServicio}} </h5>
     <div class="card-body">
       <div class="card" style="width: 51rem;">
-        <img [src]="servicioDetalle.imagenServicio" alt="...">
+        <img [src]="servicioDetalle.imagenServicio" alt="100">
         <div class="card-body">
           <p class="card-text">{{servicioDetalle.descripcionServicio}}</p>
         </div>
@@ -16,6 +16,8 @@
             <input type="text" id="disabledTextInput" class="form-control" placeholder="{{servicioDetalle.proveedor.nombre}}">
             <label for="disabledTextInput" class="form-label">Telefono</label>
             <input type="text" id="disabledTextInput" class="form-control" placeholder="{{servicioDetalle.proveedor.telefono.telefono}}">
+            <label for="disabledTextInput" class="form-label">direccion</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="{{servicioDetalle.proveedor.direccion}}">
             <label for="disabledTextInput" class="form-label">direccion</label>
             <input type="text" id="disabledTextInput" class="form-control" placeholder="{{servicioDetalle.proveedor.direccion}}">
           </div>

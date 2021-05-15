@@ -1,35 +1,79 @@
-<div class="container">
-  <h1>Crea tu evento !</h1>
+<div class="container mt-3">
+  <div class="card text-center">
+    <div class="card-header">
+      Crea tu evento !
+    </div>
+    <div class="card-body">
+      <form>
+        <fieldset>
 
-  <p>Indicanos el nombre del evento y la fecha en la que planeas realizarlo !!! comienza a seleccionar tus servicios, contactar con provedores potenciales sin moverte de tu puesto</p>
-  <div class="row">
-    <div class="input-field col s12">
-      <input id="name" type="text" class="validate">
-      <label for="name">Nombre del Evento</label>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre del evento</label>
+            <input type="text" required  class="form-control"
+              id="horario" name="horario" aria-describedby="emailHelp">
+          <!--<div *ngIf="horario.invalid && (horario.dirty || horario.touched)">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>-->
+
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Fecha Que se realizara</label>
+            <input type="date" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Hora en la que se realizara el Evento</label>
+            <input type="time" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Estado</label>
+            <select class="form-select" aria-label="Disabled select example">
+              <option selected>Open this select menu</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col" >Nombre Servicio</th>
+                <th scope="col">cantidad</th>
+                <th scope="col">valor total</th>
+                <th scope="col">borrar</th>
+              </tr>
+            </thead>
+          </table>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+        </fieldset>
+      </form>
     </div>
-  </div>
-  <div class="row">
-    <div class="input-field col s6">
-      <label for="email_inline">Fecha del Evento</label>
-      <input type="text" class="datepicker">
+    <div class="card-footer text-muted">
+      <a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Seleccionar Servicio</a>
     </div>
-    <div class="input-field col s6">
-      <input id="name" type="text" class="validate">
-      <label for="name">Hora Evento</label>
-    </div>
-  </div>
-  <div class="my-2 text-left">
-    <button class="btn btn-rounder btn-primary" type="button" (click)="createEvent()">Crear Evento.</button>
   </div>
 
-  <!--<div class="my-2 text-left">
-    <button class="btn btn-rounder btn-primary" type="button" [routerLink] = "['/servicios']">Adiciona + Servicios</button>
-  </div>
-  <h3>Mis servicios Adquiridos</h3>
-  <div class="row">
-    <div class="collection">
-      <a href="/servxUser/serviceDetail" *ngFor="let service of services" class="collection-item">{{service.nombreServicio}}</a>
-    </div>
+</div>
 
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <app-listado-servicios></app-listado-servicios>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
   </div>
-</div>-->
+</div>
+
+
+

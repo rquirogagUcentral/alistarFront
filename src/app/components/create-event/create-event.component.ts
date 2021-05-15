@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Orden } from 'src/app/models/Orden';
 import { service } from '../../mocks/mock-services';
 
 @Component({
@@ -9,8 +10,9 @@ import { service } from '../../mocks/mock-services';
 export class CreateEventComponent implements OnInit {
 
   services = service;
+  crearOrden! :Orden;
   constructor() {
-    `$('.datepicker').datepicker()`;
+
   }
 
   ngOnInit(): void {
@@ -18,7 +20,7 @@ export class CreateEventComponent implements OnInit {
 
   createEvent()
   {
-    
+
   }
 
 }

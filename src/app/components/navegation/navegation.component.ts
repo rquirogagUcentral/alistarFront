@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { parseJSON } from 'jquery';
 import { Usuario } from 'src/app/models/usuario';
 
 @Component({
@@ -10,8 +11,8 @@ import { Usuario } from 'src/app/models/usuario';
 export class NavegationComponent implements OnInit {
 
   public user : boolean;
-  public usuario: any;
-  public nombreUsuario:string;
+  public usuario!: Usuario;
+  public nombreUsuario:String ='';
   constructor(
     private _router: Router
   ) {
@@ -20,11 +21,10 @@ export class NavegationComponent implements OnInit {
     console.log(localStorage.getItem('identity'))
     if(localStorage.getItem('identity') != null || localStorage.getItem('identity') !=  undefined)
     {
-
-      var u =localStorage.getItem('nombreSubarid')?"Cesar":""
-      this.user=true;
-      console.log(u)
-      this.nombreUsuario=u
+      let usuariolocal = localStorage.getItem('identity');
+        this.usuario =JSON.parse(usuariolocal!);
+        this.user=true;
+        this.nombreUsuario = this.usuario.nombre;
       console.log("Usuario de mas " + this.nombreUsuario);
     }
 

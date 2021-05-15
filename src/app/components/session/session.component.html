@@ -7,23 +7,28 @@
         <div class="card-content">
           <form>
             <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="floatingInput" #user="ngModel" maxlength="10" name="usuario" [(ngModel)]="usuario.usuario" placeholder="Documento de Identidad">
-                <label for="floatingInput">Documento de Identidad</label>
-              <div id="emailHelp" class="form-text">Recuerda que es el documento de identidad</div>
+              <input type="text" class="form-control" id="floatingInput" #user="ngModel" maxlength="10" name="usuario"
+                [(ngModel)]="usuario.usuario" placeholder="Documento de Identidad" required>
+              <label for="floatingInput">Documento de Identidad</label>
+              <div *ngIf="user.invalid && (user.dirty || user.touched)">
+                <div id="emailHelp" class="form-text">Recuerda que es el documento de identidad</div>
+              </div>
             </div>
             <div class="form-floating">
-              <input type="password" class="form-control" maxlength="30" id="floatingPassword" name="password" [(ngModel)]="usuario.password" placeholder="Contraseña">
+              <input type="password" class="form-control" maxlength="30" id="floatingPassword" name="password"
+                [(ngModel)]="usuario.password" placeholder="Contraseña">
               <label for="exampleInputPassword1" class="form-label">Contraseña</label>
             </div>
             <br>
             <div class="card-action">
               <button type="submit" class="btn btn-primary" (click)="login()">Ingresar</button>
-              <button type="submit" class="waves-effect waves-teal btn-flat" [routerLink] = "['/getPassword']">Olvidasta la Contraseña?</button>
+              <button type="submit" class="waves-effect waves-teal btn-flat" [routerLink]="['/getPassword']">Olvidasta
+                la Contraseña?</button>
             </div>
           </form>
 
         </div>
 
+      </div>
     </div>
   </div>
-</div>
