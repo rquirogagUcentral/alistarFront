@@ -8,9 +8,20 @@
     <button class="btn btn-rounder btn-primary" type="button" [routerLink] = "['/eventxUser/createEvent']">Crear tus Eventos</button>
   </div>
 
-  <div class="collection">
-    <a href="#!" *ngFor="let evento of eventos" class="collection-item">{{evento.nombreEvento}}  --   {{evento.fechaEvento}}</a>
+  <div class="list-group">
+    <a href="" class="list-group-item d-flex justify-content-between align-items-start" *ngFor="let evento of eventos">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">
+          {{evento.nombreEvento}}
+        </div>
+      </div>
+      <span class="badge bg-primary rounded-pill">{{evento.fechaEvento}}</span>
+    </a>
   </div>
+
+  <!--<div class="collection">
+    <a href="#!" *ngFor="let evento of eventos" class="collection-item">{{evento.nombreEvento}}  --   {{evento.fechaEvento}}</a>
+  </div>-->
 
 </div>
 

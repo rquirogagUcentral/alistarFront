@@ -1,6 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { data } from 'jquery';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Servicio } from '../models/servicio';
@@ -35,6 +34,9 @@ export class ServicioService {
   
   listedServices():Observable<Servicio[]>{
     return this._http.get<Servicio[]>(environment.apiUrl+'/Servicio',this.httpOptions);
+  }
+  servicioId(id:Number):Observable<Servicio>{
+    return this._http.get<Servicio>(environment.apiUrl+'/Servicio?id='+id, this.httpOptions);
   }
 
   getServicexUser(idUsuario: number):Observable<Servicio[]>

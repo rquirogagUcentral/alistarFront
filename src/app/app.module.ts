@@ -23,6 +23,7 @@ import { CreateServiceComponent } from './components/create-service/create-servi
 import { DetailEventComponent } from './components/detail-event/detail-event.component';
 import { CreateEventComponent } from './components/create-event/create-event.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { DetalleServicioComponent } from './components/detalle-servicio/detalle-servicio.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
     DetailEventComponent,
     CreateEventComponent,
     ForgetPasswordComponent,
+    DetalleServicioComponent,
 
   ],
   imports: [

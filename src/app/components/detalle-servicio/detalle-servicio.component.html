@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="card">
+    <h5 class="card-header">{{servicioDetalle.nombreServicio}} </h5>
+    <div class="card-body">
+      <div class="card" style="width: 51rem;">
+        <img [src]="servicioDetalle.imagenServicio" alt="...">
+        <div class="card-body">
+          <p class="card-text">{{servicioDetalle.descripcionServicio}}</p>
+        </div>
+      </div>
+      <form>
+        <fieldset disabled>
+          <legend>Datos proveedor</legend>
+          <div class="mb-3">
+            <label for="disabledTextInput" class="form-label">Nombre</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="{{servicioDetalle.proveedor.nombre}}">
+            <label for="disabledTextInput" class="form-label">Telefono</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="{{servicioDetalle.proveedor.telefono.telefono}}">
+            <label for="disabledTextInput" class="form-label">direccion</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="{{servicioDetalle.proveedor.direccion}}">
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+  </div>
+
+</div>

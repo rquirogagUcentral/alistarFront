@@ -12,5 +12,6 @@ export class Servicio {
     nombreServicio: string = '';
     proveedor: Usuario = new Usuario;
     descripcionServicio:String ='';
-    imagenServicio:String=''
+    imagenServicio:String='';
+    idServicio:number=0;
 }

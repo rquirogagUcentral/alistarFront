@@ -8,8 +8,13 @@ export const service : Servicio [] =
         idCategoria : 1,
         nombreCategoria : 'Salas'
       }
+
     ,
     direccion :'AV 12 3 fake st',
+
+
+    idServicio:1,
+
     descripcionServicio:'prueba',
     imagenServicio:'adfasdfas',
     nombreServicio : 'Salas Imperial',

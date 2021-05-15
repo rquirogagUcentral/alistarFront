@@ -8,9 +8,8 @@
     <button class="btn btn-rounder btn-primary" type="button" [routerLink] = "['/servxUser/createService']">Crear Servicio</button>
   </div>
 
-  <div class="collection">
-    <a href="#!" *ngFor="let service of servicios" class="collection-item">{{service.nombreServicio}}</a>
+  <div class="list-group">
+    <a [routerLink]="['/verServicio',service.idServicio]" class="list-group-item list-group-item-action" *ngFor="let service of servicios">{{service.nombreServicio}}</a>
   </div>
-
 </div>
 
