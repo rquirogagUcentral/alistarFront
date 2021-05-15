@@ -1,14 +1,23 @@
 <div class="container">
   <div class="row g-3 ">
     <div class=" col-md-4" *ngFor="let card of ListedService">
-      <div class="card" style="width: 18rem;">
-        <img [src]="card.imagenServicio" class="card-img-top" alt="..."><img>
+      <div class="card-group">
+        <div class="card" style="width: 18rem;">
+          <img [src]="card.imagenServicio" class="card-img-top" alt="..."><img>
 
-        <div class="card-body">
-          <h5 class="card-title">{{card.nombreServicio}}</h5>
-          <p class="card-text">{{card.descripcionServicio}}</p>
+          <div class="card-body">
+            <h5 class="card-title">{{card.nombreServicio}}</h5>
+            <p class="card-text">{{card.descripcionServicio}}</p>
+            <div *ngIf="user; then thenBlock else elseBlock"></div>
+            <ng-template #thenBlock>
+                <button class="btn btn-info" (click)="guardar(card)" >Seleccionar</button>
+            </ng-template>
+            <ng-template #elseBlock>
+              <a [routerLink]="['/verServicio',card.idServicio]" class="btn btn-primary">Datos</a>
+            </ng-template>
 
-          <a [routerLink]="['/verServicio',card.idServicio]" class="btn btn-primary">Datos</a>
+
+          </div>
         </div>
       </div>
     </div>

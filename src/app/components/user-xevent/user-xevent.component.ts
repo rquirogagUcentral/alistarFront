@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { evento } from '../../mocks/mock-eventxuser';
+
 
 
 @Component({
@@ -9,7 +9,7 @@ import { evento } from '../../mocks/mock-eventxuser';
 })
 export class UserXEventComponent implements OnInit {
 
-  eventos = evento;
+  //eventos = evento;
   constructor() { }
 
   ngOnInit(): void {

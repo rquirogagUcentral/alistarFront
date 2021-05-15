@@ -18,7 +18,6 @@ export class NavegationComponent implements OnInit {
   ) {
     this.user = false;
     this.nombreUsuario='';
-    console.log(localStorage.getItem('identity'))
     if(localStorage.getItem('identity') != null || localStorage.getItem('identity') !=  undefined)
     {
       let usuariolocal = localStorage.getItem('identity');

@@ -26,7 +26,7 @@ export class SessionComponent implements OnInit {
   ) {
     this.usuario = new ConsultaUsuario()
     this.resUsuario = new ConsultaUsuarioResponse('')
-   }
+  }
 
 
   ngOnInit(): void {
@@ -34,19 +34,18 @@ export class SessionComponent implements OnInit {
     this.identity = this._sesionService.getIdentity();
   }
 
-  login():void
-  {
+  login(): void {
     console.log(this.usuario);
     this._sesionService.login(this.usuario).subscribe(
       response => {
         let identity = response
         this.identity = identity
-        if(!this.identity.numeroIdentificacion) {
+        if (!this.identity.numeroIdentificacion) {
           alert('El usuario no existe')
         } else {
           localStorage.setItem('identity', JSON.stringify(identity))
           localStorage.setItem('nombreUsuario', this.identity.nombre)
-          this._router.navigate(['typeUser']).then(data=>{
+          this._router.navigate(['typeUser']).then(data => {
             window.location.reload()
           })
 

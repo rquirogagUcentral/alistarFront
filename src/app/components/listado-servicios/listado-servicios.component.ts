@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Servicio } from 'src/app/models/servicio';
+import { Component, OnInit, Output ,EventEmitter} from '@angular/core';
+
+import { Servicio as Service } from 'src/app/models/servicio';
 import { ServicioService } from 'src/app/services/servicio.service';
 
 
@@ -10,10 +11,16 @@ import { ServicioService } from 'src/app/services/servicio.service';
 })
 export class ListadoServiciosComponent implements OnInit {
 
-
-   ListedService : Servicio[] =[] ;
+   user : boolean | undefined;
+   ListedService : Service[] =[] ;
+  @Output() servicioSeleccionado =new EventEmitter<Service>();
 
   constructor( private _ServicioService: ServicioService) {
+
+    if(localStorage.getItem('identity') != null || localStorage.getItem('identity') !=  undefined)
+    {
+        this.user=true
+    }
    }
 
   ngOnInit(): void {
@@ -21,7 +28,11 @@ export class ListadoServiciosComponent implements OnInit {
   }
   getAllServicios(){
       this._ServicioService.listedServices().subscribe(data=>{
-      this.ListedService =data;
+        this.ListedService =data;
       })
+  }
+  guardar(servicio : Service){
+    console.log(servicio)
+    this.servicioSeleccionado.emit(servicio);
   }
 }
