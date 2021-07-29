@@ -24,6 +24,7 @@ import { DetailEventComponent } from './components/detail-event/detail-event.com
 import { CreateEventComponent } from './components/create-event/create-event.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { DetalleServicioComponent } from './components/detalle-servicio/detalle-servicio.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { DetalleServicioComponent } from './components/detalle-servicio/detalle-
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
