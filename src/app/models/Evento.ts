@@ -5,9 +5,7 @@ import { Orden } from "./Orden";
 
 export class Evento {
   idEvento: number = 0;
-  nombreEvento: string = '';
-  fechaEvento : string = '';
-  usuario: Usuario = new Usuario();
-  orden: Array<Orden> = new Array<Orden>()
-
+  cantidad: number = 0;
+  servicio : number = 0;
+  valorTotal : number = 0;
 }

@@ -6,7 +6,6 @@ import { DropDownService } from 'src/app/services/drop-down.service';
 import { LocalStorageService } from 'src/app/services/localStorage.service';
 import { ServicioService } from 'src/app/services/servicio.service';
 import { SessionService } from 'src/app/services/session.service';
-//import { Categoria } from '../../mocks/mock-categorias';
 import { Categoria } from '../../models/categoria';
 import { Direccion } from 'src/app/models/direccion';
 

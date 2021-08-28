@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { proveedor }  from '../../mocks/mock-proveedores';
 
 @Component({
   selector: 'app-finder',
@@ -8,7 +7,6 @@ import { proveedor }  from '../../mocks/mock-proveedores';
 })
 export class FinderComponent implements OnInit {
 
-  cards = proveedor;
 
   constructor() { }
 

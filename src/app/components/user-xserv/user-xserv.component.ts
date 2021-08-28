@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/models/usuario';
 import { DatosService } from 'src/app/services/datos.service';
 import { ServicioService } from 'src/app/services/servicio.service';
-import { service } from '../../mocks/mock-services';
 import { Servicio } from '../../models/servicio';
 
 @Component({
@@ -12,7 +11,6 @@ import { Servicio } from '../../models/servicio';
 })
 export class UserXservComponent implements OnInit {
 
-  services = service;
   usuId : number;
   servicios : Servicio[]=[];
   usuIdentity : Usuario;
@@ -32,7 +30,7 @@ export class UserXservComponent implements OnInit {
     this._servXUser.getServicexUser(this.usuId).subscribe(response =>{
       this.servicios = response
     });
-    
+
 
   }
 

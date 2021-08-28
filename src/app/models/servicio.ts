@@ -14,4 +14,7 @@ export class Servicio {
     descripcionServicio:String ='';
     imagenServicio:String='';
     idServicio:number=0;
+    precionUnidad: number = 0;
+    valorTotal : number = 0;
+    cantidad: number = 1;
 }

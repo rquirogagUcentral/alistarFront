@@ -1,0 +1,7 @@
+{
+  "/api/*":{
+    "target":"https://test1.e-collect.com/app_express",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}

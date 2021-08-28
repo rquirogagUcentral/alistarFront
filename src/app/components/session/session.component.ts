@@ -34,12 +34,14 @@ export class SessionComponent implements OnInit {
     this.identity = this._sesionService.getIdentity();
   }
 
-  login(): void {
+  login(): void { 
     console.log(this.usuario);
     this._sesionService.login(this.usuario).subscribe(
       response => {
+        console.log('response'+ response)
         let identity = response
         this.identity = identity
+
         if (!this.identity.numeroIdentificacion) {
           alert('El usuario no existe')
         } else {
@@ -55,7 +57,8 @@ export class SessionComponent implements OnInit {
       error => {
         var errorMessage = <any>error;
         if (errorMessage != null) {
-          console.log(error)
+          console.log('el error: ',error)
+          alert('Falla en la autenticatición, Por favor Revise sus credenciales')
         }
       }
     );

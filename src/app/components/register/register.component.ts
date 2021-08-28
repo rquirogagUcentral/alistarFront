@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { TIPODOCUMENTO } from '../../mocks/mock-tipoDoc';
 import { TipoDocumento } from '../../models/tipoDocumento';
 import { Usuario } from '../../models/usuario';
 import { DropDownService } from 'src/app/services/drop-down.service';
@@ -13,7 +12,6 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
 
-  public docs=TIPODOCUMENTO;
   public tDocs : TipoDocumento[];
   public usuario : Usuario;
   public identity : any;

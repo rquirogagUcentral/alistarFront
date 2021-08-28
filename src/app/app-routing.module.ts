@@ -26,6 +26,7 @@ const routes: Routes = [
   {path: 'servxUser/serviceDetail', component: ServDetailComponent},
   {path: 'servicios', component: ListadoServiciosComponent},
   {path: 'verServicio/:id', component: DetalleServicioComponent},
+  {path: 'eventxUser/createEvent/:id', component: CreateEventComponent},
   {path: 'eventxUser/createEvent', component: CreateEventComponent},
   {path: 'eventxUser/detailEvent', component: DetailEventComponent},
   {path: 'servxUser/addService', component: AddServiceComponent},

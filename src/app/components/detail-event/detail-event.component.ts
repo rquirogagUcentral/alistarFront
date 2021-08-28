@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { service } from '../../mocks/mock-services';
 
 @Component({
   selector: 'app-detail-event',
@@ -8,7 +7,7 @@ import { service } from '../../mocks/mock-services';
 })
 export class DetailEventComponent implements OnInit {
 
-  services = service;
+
   constructor() { }
 
   ngOnInit(): void {

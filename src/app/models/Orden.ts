@@ -1,14 +1,16 @@
 import { Estado } from './estado';
+import { Evento } from './Evento';
 import { EventoOrden } from './EventoPostOrden';
 import { Horario } from './Horario';
+import { Servicio } from './servicio';
 
 export class Orden {
-  nombreServicio:String='';
+  nombreEvento:String='';
+  usuario: number = 0;
   idOrden: number = 0;
-  servicio: number = 0;
   horario: Horario = new Horario();
   estado: Estado = new Estado();
-  valorTotal: number = 0.0;
+  precioTotal: number = 0.0;
   cantidad:number =0;
-  evento:Array<EventoOrden> = new Array<EventoOrden>()
+  evento:Array<Evento> = new Array<Evento>()
 }
